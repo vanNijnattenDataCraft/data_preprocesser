@@ -1,5 +1,5 @@
 name: Task
-description: Task under a bug or feature.
+description: Describe a Task.
 title: "[Task]: <Title>"
 type: task
 body:
@@ -11,7 +11,7 @@ body:
     id: description
     attributes:
       label: Description
-      description: What feature would you like to see?
+      description: What needs to be done?
       placeholder: 
     validations:
       required: true
@@ -22,3 +22,11 @@ body:
       description: Describe the Acceptance Criteria for this task.
     validations:
       required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](docs/CODE_OF_CONDUCT.md).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
