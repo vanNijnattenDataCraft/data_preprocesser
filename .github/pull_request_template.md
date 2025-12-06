@@ -4,7 +4,7 @@
 This Pull Request addresses <!--- Please link to the issue here. For example: "#1", or "Closes #1" -->
 
 This change is needed to...
-<!--- Why is this change required? What problem does it solve? -->
+<!--- Why is this change required? What problem does it solve? How does it resolve the problem? -->
 
 ## Changes
 <!--- Describe your changes in detail -->
