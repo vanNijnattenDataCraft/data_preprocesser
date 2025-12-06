@@ -4,10 +4,11 @@
 This Pull Request addresses <!--- Please link to the issue here. For example: "#1", or "Closes #1" -->
 
 This change is needed to...
-<!--- Why is this change required? How does it address the bug/problem? -->
+<!--- Why is this change required? What problem does it solve? -->
 
 ## Changes
 <!--- Describe your changes in detail -->
+<!--- Address the acceptance criteria -->
 
 ## How Has This Been Tested?
 - [ ] I have added tests to cover my changes.

@@ -1,24 +1,26 @@
 <!--- Provide a general summary of your changes in the Title above -->
 
-## Prerequisites
-- [ ] I have read the **CONTRIBUTING** document.
-- [ ] My code follows the code style of this project.
-- [ ] I have updated the documentation accordingly.
+## Related Issue(s) and Motivation
+This Pull Request addresses <!--- Please link to the issue here. For example: "#1", or "Closes #1" -->
+
+This change is needed to...
+<!--- Why is this change required? What problem does it solve? How does it resolve the problem? -->
+
+## Changes
+<!--- Describe your changes in detail -->
+
+## How Has This Been Tested?
 - [ ] I have added tests to cover my changes.
 - [ ] All new and existing tests passed.
 
+**Environment**:
+- [ ] Windows <!--- Include OS version -->.
+- [ ] Linux <!--- Include OS version -->.
+- [ ] Mac OS <!--- Include OS version -->.
 
-## Description
-<!--- Describe your changes in detail -->
+## Documentation
+- [ ] I have updated the documentation accordingly.
 
-## Related Issue
-<!--- This project only accepts pull requests related to open issues -->
-<!--- Please link to the issue here. For example: "#1", or "Closes #1" -->
-
-## Motivation and Context
-<!--- Why is this change required? What problem does it solve? -->
-
-## How Has This Been Tested?
-<!--- Please describe in detail how you tested your changes. -->
-<!--- Include details of your testing environment, and the tests you ran to -->
-<!--- See how your change affects other areas of the code, etc. -->
+## Prerequisites
+- [ ] I have read the **CONTRIBUTING** document.
+- [ ] My code follows the code style of this project.
