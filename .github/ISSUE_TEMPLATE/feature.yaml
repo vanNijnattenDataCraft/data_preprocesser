@@ -37,7 +37,7 @@ body:
       label: Suggested Solutions
       description: Describe how this feature could be implemented.
   - type: textarea
-    id: feature-description
+    id: additional-context
     attributes:
       label: Additional Context
       description: Add any relevant screenshots, links, or resources.
