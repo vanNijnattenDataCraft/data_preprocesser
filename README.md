@@ -1,40 +1,19 @@
+# Data Pre-Processor
+
+The Data Pre-Processor is a Python project for pre-processing data files (csv, xlsx, etc) from various sources and locations to one or multiple destination files. A source data file usually needs to be validated before it can be processed in a data pipeline. Things that can be considered is the schema of the data (data types, column presence, names, contents of columns, uniqueness of primary keys), as well as presence of values in columns, conversion errors, and more. Finally, for some use cases, source data files can be combined into a single file, before writing it at a specific location in a specific format for further processing.
 
 - **Website:** https://projects.vannijnatten.dev/dpp
-- **Documentation:** https://projects.vannijnatten.dev/dpp/docs
+- **Documentation:** https://docs.vannijnatten.dev/dpp
 
 
-Code of Conduct
-----------------------
+# Code of Conduct
 
-The Data Processor is an open source project developed by a lonely developer in need of contributors. Please read how to
-[Contribute](./docs/CONTRIBUTING.md). Please also read the [Code of Conduct](./docs/CODE_OF_CONDUCT.md) for guidance on
-how to interact with others in a way that makes a community thrive.
-
-
-Development
-----------------------
+The Data Pre-Processor is an open source project developed by a lonely developer in need of contributors.
+- Please read the [Code of Conduct](./docs/CODE_OF_CONDUCT.md) for guidance on how to interact with others in a way that makes a community thrive.
+- Please also read how to [Contribute](./docs/CONTRIBUTING.md), if you would like to contribute.
 
 
-```bash
-uv self update
-uv python install 3.14
-uv venv
-. .venv/Scripts/activate
-uv pip install -r pyproject.toml
-uv sync
-uv pip install -e .
-uv run src/data_preprocessor
-```
-
-
-Testing
-----------------------
-
-NumPy requires `pytest`.
-
-
-Call for Contributions
-----------------------
+# Call for Contributions
 
 Writing code isn’t the only way to contribute. You can also:
 - review pull requests
@@ -45,6 +24,4 @@ Writing code isn’t the only way to contribute. You can also:
 - help with outreach and onboard new contributors
 - write grant proposals and help with other fundraising efforts
 
-If you are new to contributing to open source, [this
-guide](https://opensource.guide/how-to-contribute/) helps explain why, what,
-and how to successfully get involved.
+If you are new to contributing to open source, [this guide](https://opensource.guide/how-to-contribute/) helps explain why, what, and how to successfully get involved.
