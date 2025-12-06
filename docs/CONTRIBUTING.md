@@ -127,10 +127,30 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/vanNij
 
 
 ### Your First Code Contribution
-<!-- TODO
-include Setup of env, IDE and typical getting started instructions?
 
--->
+Follow the following steps to setup your development environment;
+
+#### Setup of your local development environment
+
+1. Install [VS Code](code.visualstudio.com).
+2. Install [Git](https://git-scm.com/).
+3. Install [UV](https://docs.astral.sh/uv/getting-started/installation/)
+4. [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+5. [Add a GPG signature to your GitHub account](https://docs.github.com/en/authentication/managing-commit-signature-verification).
+6. Fork the [repository](https://github.com/vanNijnattenDataCraft/data_preprocesser) to your account, and clone the fork to your computer.
+7. Open the local repository in VS Code.
+8. Install the suggested extensions in VS Code. They are listed in `.vscode/extensions.json`.
+9. Open the terminal in VS Code (<kbd>ctrl+shift+&#126;</kbd>), and execute `uv sync` to create the python virtual environment and install all required packages.
+
+#### Pickup an issue
+<!-- TODO -->
+
+#### Testing
+<!-- TODO -->
+
+#### Creating a Pull Request
+<!-- TODO -->
+
 
 ### Improving The Documentation
 <!-- TODO
