@@ -24,7 +24,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: checkout
-              uses: actions@checkout@6
+              uses: actions/checkout@6
             - name: Install UV
               uses: astral-sh/setup-uv@v5
             - name: Install the project
@@ -41,7 +41,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: checkout
-              uses: actions@checkout@6
+              uses: actions/checkout@6
             - name: Install UV
               uses: astral-sh/setup-uv@v5
             - name: Install the project
@@ -54,7 +54,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: checkout
-              uses: actions@checkout@6
+              uses: actions/checkout@6
             - name: Install UV
               uses: astral-sh/setup-uv@v5
             - name: Install the project
@@ -71,7 +71,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: checkout
-              uses: actions@checkout@6
+              uses: actions/checkout@6
             - name: Install UV
               uses: astral-sh/setup-uv@v5
             - name: Install the project
