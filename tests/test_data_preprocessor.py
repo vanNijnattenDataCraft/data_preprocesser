@@ -1,0 +1,29 @@
+import pytest
+from pytest_mock.plugin import MockerFixture
+
+
+@pytest.fixture
+def integer() -> int:
+    return 1
+
+
+@pytest.mark.slow
+def test_setup_fails(integer: int, mocker: MockerFixture) -> None:
+    class TestObject:
+        def method_to_test(self, integer: int) -> None:
+            pass
+
+    # Arrange
+    mocker.patch.object(TestObject, "method_to_test")
+
+    # Act
+    obj = TestObject()
+    obj.method_to_test(integer)
+
+    # Assert
+    obj.method_to_test.assert_called_once_with(integer)
+
+
+@pytest.mark.parametrize("to_pass", [(True), (False)])
+def test_pass_or_fail(to_pass: bool) -> None:
+    assert to_pass

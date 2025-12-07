@@ -1,0 +1,80 @@
+name: pytest
+on:
+    push:
+        branches:
+            - main
+            - patch/**
+    
+    pull_request:
+        branches:
+            - main
+            - patch/**
+
+defaults:
+    run:
+        shell: bash
+
+
+permissions:
+    contents: read # to fetch code (actions/checkout)
+
+jobs:
+    ruff_check:
+        name: python
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions@checkout@6
+            - name: Install UV
+              uses: astral-sh/setup-uv@v5
+            - name: Install the project
+              run: uv sync --all-extras --dev
+            - name: Run tests
+              run: uv run check src \
+                --no-fix \
+                --diff \
+                --show-files \
+                --verbose
+
+    mypy:
+        name: python
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions@checkout@6
+            - name: Install UV
+              uses: astral-sh/setup-uv@v5
+            - name: Install the project
+              run: uv sync --all-extras --dev
+            - name: Run tests
+              run: uv run mypy
+
+    bandit:
+        name: python
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions@checkout@6
+            - name: Install UV
+              uses: astral-sh/setup-uv@v5
+            - name: Install the project
+              run: uv sync --all-extras --dev
+            - name: Run tests
+              run: uv run bandit src -n 3
+
+    smoke_test:
+        name: python
+        needs:
+            - ruff_check
+            - mypy
+            - bandit
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions@checkout@6
+            - name: Install UV
+              uses: astral-sh/setup-uv@v5
+            - name: Install the project
+              run: uv sync --all-extras --dev
+            - name: Run tests
+              run: uv run pytest tests

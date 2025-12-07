@@ -5,6 +5,7 @@
     readme = "README.md"
     requires-python = ">=3.14"
     dependencies = [
+        "bandit>=1.9.1",
         "pandas>=2.3.3",
         "pyyaml>=6.0.3",
         "rich>=14.2.0",
@@ -107,3 +108,17 @@
         "tests"
     ]
     ignore_missing_imports = true
+
+[tool.pytest]
+    addopts = [
+        "--strict-markers"
+    ]
+    markers = [
+        "configuration",
+        "data",
+        "slow",
+        "user_interface",
+    ]
+    testpaths = [
+        "tests"
+    ]
