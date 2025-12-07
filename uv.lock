@@ -52,6 +52,7 @@ name = "data-preprocessor"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "bandit" },
     { name = "pandas" },
     { name = "pyyaml" },
     { name = "rich" },
@@ -80,6 +81,7 @@ test = [
 
 [package.metadata]
 requires-dist = [
+    { name = "bandit", specifier = ">=1.9.1" },
     { name = "pandas", specifier = ">=2.3.3" },
     { name = "pyyaml", specifier = ">=6.0.3" },
     { name = "rich", specifier = ">=14.2.0" },
