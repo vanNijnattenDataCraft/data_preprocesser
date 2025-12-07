@@ -4,13 +4,11 @@ on:
         branches:
             - main
             - patch/**
-            - user/jos/11-setup-github-ci-with-precommit-hooks
     
     pull_request:
         branches:
             - main
             - patch/**
-            - user/jos/11-setup-github-ci-with-precommit-hooks
 
 defaults:
     run:
