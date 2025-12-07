@@ -30,11 +30,12 @@ jobs:
             - name: Install the project
               run: uv sync --all-extras --dev
             - name: Run tests
-              run: uv run ruff check src \
-                --no-fix \
-                --diff \
-                --show-files \
-                --verbose
+              run: |
+                uv run ruff check src \
+                  --no-fix \
+                  --diff \
+                  --show-files \
+                  --verbose
 
     mypy:
         name: Static type checking using MyPy
