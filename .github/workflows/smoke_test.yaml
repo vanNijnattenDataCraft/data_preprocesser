@@ -20,7 +20,7 @@ permissions:
 
 jobs:
     ruff_check:
-        name: python
+        name: Linting using Ruff check
         runs-on: ubuntu-latest
         steps:
             - name: checkout
@@ -37,7 +37,7 @@ jobs:
                 --verbose
 
     mypy:
-        name: python
+        name: Static type checking using MyPy
         runs-on: ubuntu-latest
         steps:
             - name: checkout
@@ -47,10 +47,10 @@ jobs:
             - name: Install the project
               run: uv sync --all-extras --dev
             - name: Run tests
-              run: uv run mypy
+              run: uv run mypy src
 
     bandit:
-        name: python
+        name: Security check using Bandit
         runs-on: ubuntu-latest
         steps:
             - name: checkout
@@ -63,7 +63,7 @@ jobs:
               run: uv run bandit src -n 3
 
     smoke_test:
-        name: python
+        name: Smoke test using PyTest
         needs:
             - ruff_check
             - mypy
