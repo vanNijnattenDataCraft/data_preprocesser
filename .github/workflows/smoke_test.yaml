@@ -23,8 +23,7 @@ jobs:
         name: python
         runs-on: ubuntu-latest
         steps:
-            - name: checkout
-              uses: actions/checkout@6
+            - uses: actions/checkout@5
             - name: Install UV
               uses: astral-sh/setup-uv@v5
             - name: Install the project
@@ -40,8 +39,7 @@ jobs:
         name: python
         runs-on: ubuntu-latest
         steps:
-            - name: checkout
-              uses: actions/checkout@6
+            - uses: actions/checkout@5
             - name: Install UV
               uses: astral-sh/setup-uv@v5
             - name: Install the project
@@ -53,8 +51,7 @@ jobs:
         name: python
         runs-on: ubuntu-latest
         steps:
-            - name: checkout
-              uses: actions/checkout@6
+            - uses: actions/checkout@5
             - name: Install UV
               uses: astral-sh/setup-uv@v5
             - name: Install the project
@@ -70,8 +67,7 @@ jobs:
             - bandit
         runs-on: ubuntu-latest
         steps:
-            - name: checkout
-              uses: actions/checkout@6
+            - uses: actions/checkout@5
             - name: Install UV
               uses: astral-sh/setup-uv@v5
             - name: Install the project
