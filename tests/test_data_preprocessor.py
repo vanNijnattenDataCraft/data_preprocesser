@@ -21,12 +21,13 @@ def test_setup_fails(integer: int, mocker: MockerFixture) -> None:
     obj.method_to_test(integer)
 
     # Assert
-    obj.method_to_test.assert_called_once_with(integer)
+    obj.method_to_test.assert_called_once_with(integer)  # pyright: ignore[reportUnknownMemberType, reportAttributeAccessIssue]
 
 
 @pytest.mark.parametrize("to_pass", [(True), (True)])
 def test_passes(to_pass: bool) -> None:
     assert to_pass
+
 
 @pytest.mark.parametrize("to_pass", [(False), (False)])
 def test_expect_exception(to_pass: bool) -> None:
