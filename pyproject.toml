@@ -2,6 +2,9 @@
     name = "data_preprocessor"
     version = "0.1.0"
     description = "The Data Processor"
+    authors = [
+        {name = "J. van Nijnatten"},
+    ]
     readme = "README.md"
     requires-python = ">=3.14"
     dependencies = [
