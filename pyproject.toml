@@ -6,6 +6,7 @@
         {name = "J. van Nijnatten"},
     ]
     readme = "README.md"
+    license = "MIT"
     requires-python = ">=3.14"
     dependencies = [
         "pandas>=2.3.3",
