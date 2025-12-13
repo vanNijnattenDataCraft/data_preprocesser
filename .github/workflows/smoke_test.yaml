@@ -41,8 +41,8 @@ jobs:
 
             - name: Install the project
               run: |
-                uv sync
-                  --all-extras
+                uv sync \
+                  --all-extras \
                   --dev
 
             - name: Run Ruff
