@@ -25,3 +25,6 @@ Writing code isn’t the only way to contribute. You can also:
 - write grant proposals and help with other fundraising efforts
 
 If you are new to contributing to open source, [this guide](https://opensource.guide/how-to-contribute/) helps explain why, what, and how to successfully get involved.
+
+
+![Smoke Test](https://github.com/vanNijnattenDataCraft/data_preprocesser/actions/workflows/smoke_test.yaml/badge.svg)
