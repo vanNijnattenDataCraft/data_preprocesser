@@ -1,5 +1,7 @@
 # Data Pre-Processor
 
+![Smoke Test](https://github.com/vanNijnattenDataCraft/data_preprocesser/actions/workflows/smoke_test.yaml/badge.svg)
+
 The Data Pre-Processor is a Python project for pre-processing data files (csv, xlsx, etc) from various sources and locations to one or multiple destination files. A source data file usually needs to be validated before it can be processed in a data pipeline. Things that can be considered is the schema of the data (data types, column presence, names, contents of columns, uniqueness of primary keys), as well as presence of values in columns, conversion errors, and more. Finally, for some use cases, source data files can be combined into a single file, before writing it at a specific location in a specific format for further processing.
 
 - **Website:** https://projects.vannijnatten.dev/dpp
@@ -25,6 +27,3 @@ Writing code isn’t the only way to contribute. You can also:
 - write grant proposals and help with other fundraising efforts
 
 If you are new to contributing to open source, [this guide](https://opensource.guide/how-to-contribute/) helps explain why, what, and how to successfully get involved.
-
-
-![Smoke Test](https://github.com/vanNijnattenDataCraft/data_preprocesser/actions/workflows/smoke_test.yaml/badge.svg)
