@@ -87,4 +87,7 @@ jobs:
 
             - name: Run tests
               run: |
-                uv run pytest $TST_PATH
+                uv run pytest $TST_PATH \
+                  --cov=$SRC_PATH \
+                  --doctest-modules \
+                  --cov-report markdown-append:$GITHUB_STEP_SUMMARY 
