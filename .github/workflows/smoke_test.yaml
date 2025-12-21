@@ -49,8 +49,7 @@ jobs:
               run: |
                 uv run ruff check $SRC_PATH \
                   --no-fix \
-                  --diff \
-                  --show-files
+                  --output-format=github
                 uv run ruff format $SRC_PATH \
                   --diff
 
