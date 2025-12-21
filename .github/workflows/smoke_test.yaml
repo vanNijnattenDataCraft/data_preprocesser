@@ -49,15 +49,14 @@ jobs:
               run: |
                 uv run ruff check $SRC_PATH \
                   --no-fix \
-                  --diff \
-                  --show-files
-                uv run ruff format $SRC_PATH \
-                  --diff
+                  --output-format=github
 
             - name: Run MyPy
               run: |
                 uv run mypy $SRC_PATH \
-                  --config-file pyproject.toml
+                  --config-file pyproject.toml \
+                  --output=json \
+                  | jq -r '"::error title=Mypy issue,file=\(.file),line=\(.line),col=\(.column)::\(.message)"'
 
             - name: Run Bandit
               run: |
