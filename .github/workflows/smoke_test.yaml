@@ -89,4 +89,12 @@ jobs:
                 uv run pytest $TST_PATH \
                   --cov=$SRC_PATH \
                   --doctest-modules \
-                  --cov-report markdown-append:$GITHUB_STEP_SUMMARY 
+                  --cov-report markdown-append:$GITHUB_STEP_SUMMARY \
+                  --junitxml=junit/test-results.xml
+
+            - name: Upload pytest test results
+              uses: actions/upload-artifact@v6
+              with:
+                name: pytest-results
+                path: junit/test-results.xml
+              if: ${{ always() }}
