@@ -9,7 +9,10 @@
     license = "MIT"
     requires-python = ">=3.14"
     classifiers = [
+        "License :: Osi Approved :: MIT License",
+        "Operating System :: OS Independent",
         "Private :: Do Not Upload",
+        "Programming Language :: Python :: 3.14",
     ]
     dependencies = [
         "pandas>=2.3.3",
