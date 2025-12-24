@@ -60,10 +60,25 @@ jobs:
 
             - name: Run Bandit
               run: |
-                uv run bandit $SRC_PATH \
-                  -r \
-                  -n 3 \
-                  -lll
+                {
+                  echo "Bandit:"
+                  echo "\`\`\`"
+                  uv run bandit $SRC_PATH \
+                    -c pyproject.toml \
+                    -r \
+                    -n 3 \
+                    -lll
+                  echo "\`\`\`"
+                } >> $GITHUB_STEP_SUMMARY
+
+            - name: Run Radon
+              run: |
+                {
+                  echo "Radon:"
+                  echo "\`\`\`"
+                  uv run radon cc $SRC_PATH
+                  echo "\`\`\`"
+                }  >> $GITHUB_STEP_SUMMARY
 
     smoke_test:
         name: Smoke Test
@@ -89,13 +104,4 @@ jobs:
                 uv run pytest $TST_PATH \
                   --cov=$SRC_PATH \
                   --doctest-modules \
-                  --cov-report markdown-append:$GITHUB_STEP_SUMMARY \
-                  --junitxml=junit/test-results.xml
-
-            - name: Upload pytest test results
-              uses: actions/upload-artifact@v6
-              with:
-                name: pytest-results
-                path: junit/test-results.xml
-                retention-days: 7
-              if: ${{ always() }}
+                  --cov-report markdown-append:$GITHUB_STEP_SUMMARY

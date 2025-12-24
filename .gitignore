@@ -13,6 +13,9 @@ wheels/
 .mypy_cache
 .ruff_cache
 
+# pytest
+.coverage
+
 # VSCode
 .vscode/extensions.json
 .vscode/launch.json

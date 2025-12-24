@@ -32,7 +32,8 @@
         "ruff==0.14.6",
         "mypy==1.18.2",
         "bandit==1.9.1",
-    ]
+        "radon>=6.0.1",
+]
     test = [
         "pytest==9.0.1",
         "pytest-cov>=7.0.0",
@@ -96,6 +97,8 @@
     quote-style = "double"
     indent-style = "space"
     line-ending = "auto"
+    docstring-code-format = true
+    docstring-code-line-length = 50
 
 
 [tool.ruff.lint.per-file-ignores]
@@ -114,10 +117,21 @@
 
 [tool.mypy]
     exclude = [
-        "src/capabilities",
-        "tests"
+        "tests",
     ]
     ignore_missing_imports = true
+
+
+[tool.bandit]
+    exclude_dirs = [
+        "tests"
+    ]
+
+
+[tool.radon]
+    order = "SCORE"
+    cc_min = "C"
+
 
 [tool.pytest]
     addopts = [
