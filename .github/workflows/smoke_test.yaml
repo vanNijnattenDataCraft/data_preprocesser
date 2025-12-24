@@ -64,6 +64,7 @@ jobs:
                   echo "Bandit:"
                   echo "\`\`\`"
                   uv run bandit $SRC_PATH \
+                    -c pyproject.toml \
                     -r \
                     -n 3 \
                     -lll

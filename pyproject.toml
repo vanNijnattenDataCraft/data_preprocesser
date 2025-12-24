@@ -97,6 +97,8 @@
     quote-style = "double"
     indent-style = "space"
     line-ending = "auto"
+    docstring-code-format = true
+    docstring-code-line-length = 50
 
 
 [tool.ruff.lint.per-file-ignores]
@@ -115,14 +117,21 @@
 
 [tool.mypy]
     exclude = [
-        "src/capabilities",
-        "tests"
+        "tests",
     ]
     ignore_missing_imports = true
+
+
+[tool.bandit]
+    exclude_dirs = [
+        "tests"
+    ]
+
 
 [tool.radon]
     order = "SCORE"
     cc_min = "C"
+
 
 [tool.pytest]
     addopts = [
