@@ -1,6 +1,7 @@
 # Data Pre-Processor
 
 ![Smoke Test](https://github.com/vanNijnattenDataCraft/data_preprocesser/actions/workflows/smoke_test.yaml/badge.svg)
+[![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
 
 The Data Pre-Processor is a Python project for pre-processing data files (csv, xlsx, etc) from various sources and locations to one or multiple destination files. A source data file usually needs to be validated before it can be processed in a data pipeline. Things that can be considered is the schema of the data (data types, column presence, names, contents of columns, uniqueness of primary keys), as well as presence of values in columns, conversion errors, and more. Finally, for some use cases, source data files can be combined into a single file, before writing it at a specific location in a specific format for further processing.
 
