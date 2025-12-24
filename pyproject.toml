@@ -32,7 +32,8 @@
         "ruff==0.14.6",
         "mypy==1.18.2",
         "bandit==1.9.1",
-    ]
+        "radon>=6.0.1",
+]
     test = [
         "pytest==9.0.1",
         "pytest-cov>=7.0.0",
@@ -118,6 +119,10 @@
         "tests"
     ]
     ignore_missing_imports = true
+
+[tool.radon]
+    order = "SCORE"
+    cc_min = "C"
 
 [tool.pytest]
     addopts = [
