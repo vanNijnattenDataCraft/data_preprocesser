@@ -60,14 +60,18 @@ jobs:
 
             - name: Run Bandit
               run: |
+                echo "Bandit:\n```" >> $GITHUB_STEP_SUMMARY
                 uv run bandit $SRC_PATH \
                   -r \
                   -n 3 \
-                  -lll > $GITHUB_STEP_SUMMARY
+                  -lll >> $GITHUB_STEP_SUMMARY
+                echo "```" >> $GITHUB_STEP_SUMMARY
 
             - name: Run Radon
               run: |
-                uv run radon cc $SRC_PATH > $GITHUB_STEP_SUMMARY
+                echo "Radon:\n```" >> $GITHUB_STEP_SUMMARY
+                uv run radon cc $SRC_PATH >> $GITHUB_STEP_SUMMARY
+                echo "```" >> $GITHUB_STEP_SUMMARY
 
     smoke_test:
         name: Smoke Test
